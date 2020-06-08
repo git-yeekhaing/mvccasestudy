@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mvcsample1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,15 @@ namespace mvcsample1.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ActionResult Index()
         {
-            return "Hello MVC 5 Application";
+            EmployeeBusinessLayer employeeBL = new EmployeeBusinessLayer();
+            Employee employee = employeeBL.GetEmployeeDetails(102);
+
+            ViewData["Employee"] = employee;
+            ViewData["Header"] = "Employee Details";
+
+            return View();
         }
     }
 }
