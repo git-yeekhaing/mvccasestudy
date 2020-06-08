@@ -15,10 +15,9 @@ namespace mvcsample1.Controllers
             EmployeeBusinessLayer employeeBL = new EmployeeBusinessLayer();
             Employee employee = employeeBL.GetEmployeeDetails(102);
 
-            ViewBag.Employee = employee;
-            ViewBag.Header = "Employee Details";
+            ViewBag.Header = "Strong Typed View";
 
-            return View();
+            return View(employee);
         }
     }
 }

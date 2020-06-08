@@ -1,7 +1,4 @@
-﻿@{
-    Layout = null;
-}
-
+﻿@model mvcsample1.Models.Employee
 <!DOCTYPE html>
 
 <html>
@@ -18,11 +15,11 @@
     <table style="font-family:Arial">
         <tr>
             <td>Employee ID:</td>
-            <td>@employee.EmployeeId</td>
+            <td>@Model.EmployeeId</td>
         </tr>
         <tr>
             <td>Name :</td>
-            <td>@employee.Name</td>
+            <td>@Model.Name</td>>
         </tr>
     </table>
 </body>
