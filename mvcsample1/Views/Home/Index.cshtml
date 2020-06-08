@@ -11,11 +11,10 @@
 </head>
 <body>
     @{ 
-        var employee = ViewData["Employee"]
-            as mvcsample1.Models.Employee;
+        var employee = ViewBag.Employee;
     }
 
-    <h2>@ViewData["Header"]</h2>
+    <h2>@ViewBag.Header</h2>
     <table style="font-family:Arial">
         <tr>
             <td>Employee ID:</td>
