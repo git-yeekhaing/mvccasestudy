@@ -1,0 +1,24 @@
+﻿@model mvcsample1.ViewModel.EmployeeDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<html xmlns ="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.PageTitle</title>
+</head>
+
+<body>
+    <h1>@Model.PageHeader</h1>
+    <div>
+        EmployeeID : @Model.Employee.EmployeeId
+    </div>
+    <div>
+        Name: @Model.Employee.Name
+    </div>
+    <h1>Address</h1>
+    <div>
+        City:@Model.Address.City
+    </div>
+</body>
+</html>
